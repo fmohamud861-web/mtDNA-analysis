@@ -1,97 +1,163 @@
-# Assignment 7 – Human Mitochondrial DNA Analysis
+# Mitochondrial DNA Sequence Analysis
 
-## Purpose of This Project
-
-The purpose of this project is to retrieve and analyze human mitochondrial DNA (mtDNA) sequences using Python and RESTful APIs. Mitochondrial DNA is maternally inherited and plays a key role in energy production and genetic studies.  
-
-This project performs the following main tasks:
-
-1. Retrieves 100 human mitochondrial DNA sequences from the NCBI Nucleotide database using the Entrez API  
-2. Calculates GC content and sequence length for each sequence  
-3. Generates two histograms to visualize GC content and sequence length  
-4. (Bonus) Creates an interactive scatter plot of GC content versus sequence length using Plotly  
+**Student:** Fardowsa Mohamud  
+**Course:** Bioinformatics / Biological Databases  
+**Date:** March 10, 2026  
 
 ---
 
-## Files Included
+# Project Overview
 
-- `final_analysis.py`  
-  Main Python script. Running this file performs sequence retrieval, calculations, and generates visualizations.
+This project analyzes mitochondrial DNA (mtDNA) sequences retrieved from the NCBI biological database. The goal of this analysis was to demonstrate how bioinformatics tools can be used to retrieve, process, analyze, and visualize biological sequence data using Python.
 
-- `interactive_plot.py` (optional bonus)  
-  Reads the processed CSV and creates an interactive scatter plot.
+Mitochondrial DNA is essential for cellular energy production and is widely studied in genetics, evolutionary biology, and medical research. By analyzing sequence characteristics such as GC content and sequence length, we can gain insights into the composition and variability of mitochondrial sequences.
 
-- `data.csv`  
-  Contains processed sequence data with columns: `sequence_length` and `gc_content`.
-
-- `figure1.png`  
-  Histogram of GC content distribution.
-
-- `figure2.png`  
-  Histogram of sequence length distribution.
-
-- `interactive_plot.html` (optional bonus)  
-  Interactive scatter plot of GC content vs sequence length.
-
-- `README.md`  
-  Documentation, project workflow, and reflection (this file).
+This project combines biological databases, Python programming, and data visualization to perform automated sequence analysis.
 
 ---
 
-## How to Run the Scripts
+# Project Objectives
 
-### Step 1: Navigate to the project folder
-```bash
+The main objectives of this project were:
+
+1. Retrieve mitochondrial DNA sequences from the NCBI database.
+2. Process sequence data using Python and Biopython.
+3. Perform computational analyses on the sequences.
+4. Visualize the results using graphical plots.
+5. Create an interactive visualization as part of the bonus challenge.
+6. Document the workflow in a professional GitHub repository.
+
+---
+
+# Project Workflow
+
+The workflow for this project consisted of the following steps:
+
+### 1. Data Retrieval
+DNA sequences were retrieved from the NCBI database using Python scripts that access biological sequence records.
+
+### 2. Data Processing
+Sequences were processed using the Biopython library. Each sequence was parsed and analyzed to extract key metrics.
+
+### 3. Sequence Analysis
+Two analyses were performed:
+
+• **GC Content Analysis**  
+The percentage of guanine (G) and cytosine (C) nucleotides in each sequence was calculated.
+
+• **Sequence Length Analysis**  
+The total nucleotide length of each sequence was calculated.
+
+### 4. Data Visualization
+Python libraries such as Matplotlib were used to generate visualizations of the results.
+
+### 5. Interactive Visualization (Bonus)
+An interactive visualization was created using Plotly to allow dynamic exploration of the dataset.
+
+---
+
+# Project Files
+
+This repository contains the following files:
+
+| File | Description |
+|-----|-------------|
+| final_analysis.py | Main Python script used for sequence retrieval and analysis |
+| interactive_plot.py | Python script used to generate the interactive Plotly visualization |
+| data.csv | Processed dataset used for plotting |
+| figure1.png | Histogram showing GC content distribution |
+| figure2.png | Histogram showing sequence length distribution |
+| interactive_plot.html | Interactive visualization that can be opened in a web browser |
+| analysis_report.md | Detailed project report explaining the analysis |
+| README.md | Documentation and project overview |
+
+---
+
+# Visualizations
+
+## GC Content Distribution
+
+![GC Content Histogram](figure1.png)
+
+This figure shows the distribution of GC content across the mitochondrial DNA sequences analyzed in this project.
+
+---
+
+## Sequence Length Distribution
+
+![Sequence Length Histogram](figure2.png)
+
+This figure shows how sequence lengths vary across the dataset.
+
+---
+
+# Interactive Visualization (Bonus)
+
+This project also includes an **interactive Plotly visualization**.
+
+The interactive plot allows users to:
+
+• Hover over data points  
+• Zoom in and out of the plot  
+• Explore sequence statistics dynamically  
+
+To view the interactive visualization:
+
+Download and open:interactive_plot.html
+
+
+in any web browser.
+
+---
+
+# How to Run the Analysis
+
+## Step 1 – Navigate to the project directory
 cd ~/week7
-### Step 2: Confirm files exist
-ls -la
-You should see final_analysis.py,interactive_plot.py, and other output files.
-### Step 3: Install required packages (only once)
-pip3 install biopython pandas matplotlib plotly requests
-### Step 4: Run the main analysis
+
+## Step 2 – Install required Python packages
+pip3 install biopython pandas matplotlib plotly
+
+## Step 3 – Run the main analysis script
 python3 final_analysis.py
-### Step 5: Run the interactive visualization (optional bonus)
-python3 interactive_plot.py
 
-### Expected Output
-When running the scripts, you should see messages such as:
+This script will:
 
-- STEP 1: Retrieving sequences from NCBI…
+• Retrieve mitochondrial DNA sequences  
+• Perform GC content analysis  
+• Calculate sequence lengths  
+• Generate plots and save results  
 
-STEP 2: Calculating GC content and sequence lengths…
+---
 
-STEP 3: Generating histograms…
+# Example Output
 
-Script completed successfully!
+Running the script produces:
 
-The scripts will produce:
+• `data.csv` – processed dataset  
+• `figure1.png` – GC content histogram  
+• `figure2.png` – sequence length histogram  
 
-data.csv with GC content and sequence lengths
+The bonus script generates:
 
-figure1.png (GC content distribution)
+• `interactive_plot.html`
 
-figure2.png (sequence length distribution)
+---
 
-interactive_plot.html (interactive scatter plot, optional)
+# Reflection
 
+This project helped demonstrate how biological databases and computational tools can be integrated to analyze genetic data. By using Python and bioinformatics libraries, it was possible to automate data retrieval, perform sequence analysis, and generate visualizations efficiently.
 
-## Reflection
-What I Learned About Bioinformatics APIs
+This type of workflow is commonly used in bioinformatics research when working with large biological datasets. Learning how to retrieve data programmatically and analyze it using scripts is an important skill for modern biological research and data-driven healthcare applications.
 
-This project taught me how to programmatically retrieve real biological data using the NCBI Entrez API. I learned how sequences are structured in FASTA format and how to extract meaningful information such as GC content and sequence length. Automating these steps with Python allows for efficient, reproducible analysis of large datasets.
+---
 
-The Most Challenging Part and How I Solved It
+# AI Use Disclosure
 
-The most challenging part was handling sequence data formatting and calculating GC content consistently, especially with partial sequences. I solved this by writing reusable Python functions and verifying results by comparing sequences manually. Creating visualizations that accurately reflect the data also required testing and adjusting bins in histograms.
+AI Tool Used: ChatGPT
 
-Connection to My Future Work
+Purpose of AI Use:
+AI assistance was used to help structure the Python scripts, troubleshoot errors, and assist in formatting documentation for the project.
 
-This project strengthened my understanding of computational biology workflows. Instead of manually analyzing sequences, I can now use APIs and Python scripts to explore genomic features at scale. This is a key skill for bioinformatics, genomics research, and healthcare data analysis.
-
-## AI Use Disclosure:
-
-AI tool used: ChatGPT
-
-What I used it for: Assisting in structuring Python scripts, writing this README/report, and suggesting workflow and visualization approaches.
-
-How I verified/edited the output: All scripts were run on the AWS server to verify correct sequence retrieval, data processing, and figure generation. I reviewed the code and outputs to ensure they met assignment requirements.
+Verification Process:
+All code and outputs were tested on the AWS server to ensure that the scripts executed correctly, generated the expected output files, and satisfied the assignment requirements.
