@@ -107,6 +107,23 @@ Download and open:interactive_plot.html
 
 
 in any web browser.
+## How to Access the GitHub Repository
+
+This project has been uploaded to GitHub as part of the optional bonus challenge.
+
+To access the repository:
+
+1. Open a web browser.
+2. Go to the following link:
+
+https://github.com/fmohamud861-web/mtDNA-analysis
+
+3. The repository contains all project files including:
+   - Python analysis scripts
+   - Data used for the analysis
+   - Figures generated from the analysis
+   - The interactive visualization
+   - Project documentation
 
 ---
 
